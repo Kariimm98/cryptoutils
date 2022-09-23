@@ -14,29 +14,29 @@ import java.util.Base64;
 import java.util.HashMap;
 import java.util.Properties;
 
-public class Hash {
-    Properties props;
+public  class Hash {
+    public  static Properties props;
 
-    public  Hash() throws IOException {
-        this.props = new Properties();
+    static{
+        props = new Properties();
         //takes file properties from current classpath
         try{
-            this.props.load(ClassLoader.getSystemClassLoader().getResourceAsStream("/cryptoutils.properties"));
+            props.load(ClassLoader.getSystemClassLoader().getResourceAsStream("/cryptoutils.properties"));
         }catch(IOException| NullPointerException error){
             setDefaultProperties();
         }
     }
 
-    public byte[] getHash(byte[] message) throws NoSuchAlgorithmException, MissingPropertiesException {
+    public  static byte[] getHash(byte[] message) throws NoSuchAlgorithmException, MissingPropertiesException {
 
-        String algorithm = this.props.getProperty("algorithm");
+        String algorithm = props.getProperty("algorithm");
 
         if(algorithm == null){
             throw new MissingPropertiesException();
         }
 
         var messageDigest = MessageDigest.getInstance(algorithm);
-        var salt  = this.props.getProperty("salt");
+        var salt  = props.getProperty("salt");
 
         if(salt!=null){
             messageDigest.update(salt.getBytes());
@@ -45,15 +45,15 @@ public class Hash {
         return messageDigest.digest(message);
     }
 
-    public  String getHashAsString(byte[] message) throws NoSuchAlgorithmException, MissingPropertiesException {
-        String algorithm = this.props.getProperty("algorithm");
+    public static String getHashAsString(byte[] message) throws NoSuchAlgorithmException, MissingPropertiesException {
+        String algorithm = props.getProperty("algorithm");
 
         if(algorithm == null){
             throw new MissingPropertiesException();
         }
 
         var messageDigest = MessageDigest.getInstance(algorithm);
-        var salt  = this.props.getProperty("salt");
+        var salt  = props.getProperty("salt");
 
         if(salt!=null){
             messageDigest.update(salt.getBytes());
@@ -65,10 +65,10 @@ public class Hash {
 
     }
 
-    public DigestResult getHashWithRandomSalt(byte[] message) throws MissingPropertiesException, NoSuchAlgorithmException {
+    public static DigestResult getHashWithRandomSalt(byte[] message) throws MissingPropertiesException, NoSuchAlgorithmException {
         DigestResult<byte[]> result;
 
-        String algorithm = this.props.getProperty("algorithm");
+        String algorithm = props.getProperty("algorithm");
 
         if(algorithm == null){
             throw new MissingPropertiesException();
@@ -83,10 +83,10 @@ public class Hash {
         return result;
     }
 
-    public DigestResult getHashWithRandomSaltAsString(byte[] message) throws MissingPropertiesException, NoSuchAlgorithmException {
+    public static DigestResult getHashWithRandomSaltAsString(byte[] message) throws MissingPropertiesException, NoSuchAlgorithmException {
         DigestResult<String> result;
 
-        String algorithm = this.props.getProperty("algorithm");
+        String algorithm = props.getProperty("algorithm");
 
         if(algorithm == null){
             throw new MissingPropertiesException();
@@ -107,15 +107,16 @@ public class Hash {
     }
 
     //takes file properties from Library resources
-    public void setDefaultProperties() throws IOException {
-        this.props.load(Hash.class.getResourceAsStream("/cryptoutils.properties"));
+    public static void setDefaultProperties() {
+        try {
+            props.load(Hash.class.getResourceAsStream("/cryptoutils.properties"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
-    public Properties getProps(){
-        return this.props;
-    }
 
-    public static byte[] getRandomSalt(){
+    public  static byte[] getRandomSalt(){
         var secureRandom = new SecureRandom();
         var salt  = new byte[16];
         secureRandom.nextBytes(salt);
