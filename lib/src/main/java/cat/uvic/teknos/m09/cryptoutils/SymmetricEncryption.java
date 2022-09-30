@@ -21,28 +21,24 @@ public class SymmetricEncryption {
         //takes file properties from current classpath
         try{
             props.load(ClassLoader.getSystemClassLoader().getResourceAsStream("/cryptoutils.properties"));
-            cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
         }catch(IOException | NullPointerException error){
             setDefaultProperties();
-        } catch (NoSuchPaddingException e) {
-            throw new RuntimeException(e);
-        } catch (NoSuchAlgorithmException e) {
-            throw new RuntimeException(e);
         }
     }
 
     public static EncryptedMessage encryptMessage(byte[]message, String password) throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidKeySpecException, InvalidAlgorithmParameterException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException {
 
         var key = getPrivateKeyFromPass(password);
-        String salt = props.getProperty("symmetric.salt");
-
-        var iv = new IvParameterSpec(salt.getBytes());
+        var secureRandom = new SecureRandom();
+        var bytes = new byte[16];
+        secureRandom.nextBytes(bytes);
+        var iv = new IvParameterSpec(bytes);
+        cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
         cipher.init(Cipher.ENCRYPT_MODE,key,iv);
 
         var cipherText = cipher.doFinal(message);
-//        var encoder = Base64.getEncoder();
-//        var cipherTextBase64 = encoder.encodeToString(cipherText);
-        EncryptedMessage result = new EncryptedMessage(cipherText,salt.getBytes());
+
+        EncryptedMessage result = new EncryptedMessage(cipherText,bytes);
         return result;
     }
 
@@ -61,7 +57,7 @@ public class SymmetricEncryption {
 
         String salt = props.getProperty("symmetric.salt");
         String algorithm = props.getProperty("symmetric.algorithm");
-        int iterations = (Integer)props.get("symmetric");
+        int iterations = Integer.parseInt(props.getProperty("symmetric.iterations"));
 
         PBEKeySpec pbeKeySpec = new PBEKeySpec(password.toCharArray(),salt.getBytes(),iterations,256);
         SecretKey pbeKey = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256").generateSecret(pbeKeySpec);

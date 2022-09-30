@@ -4,24 +4,16 @@
 package cat.uvic.teknos.m09.cryptoutils;
 
 import cat.uvic.teknos.m09.cryptoutils.Exceptions.MissingPropertiesException;
-import cat.uvic.teknos.m09.cryptoutils.Hash;
 import cat.uvic.teknos.m09.cryptoutils.dto.DigestResult;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-
 import java.security.NoSuchAlgorithmException;
-import java.util.HashMap;
+
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class HashTest {
 
     private static Hash Hash;
-
-    @BeforeAll
-    static void beforeAll() {
-        Hash = assertDoesNotThrow(()-> new Hash());
-    }
 
     @Test void sameMessageSameResult() throws NoSuchAlgorithmException {
 
