@@ -9,7 +9,6 @@ import javax.crypto.spec.SecretKeySpec;
 import java.io.IOException;
 import java.security.*;
 import java.security.spec.InvalidKeySpecException;
-import java.util.Base64;
 import java.util.Properties;
 
 public class SymmetricEncryption {
@@ -27,7 +26,6 @@ public class SymmetricEncryption {
     }
 
     public static EncryptedMessage encryptMessage(byte[]message, String password) throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidKeySpecException, InvalidAlgorithmParameterException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException {
-
         var key = getPrivateKeyFromPass(password);
         var secureRandom = new SecureRandom();
         var bytes = new byte[16];

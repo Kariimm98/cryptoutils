@@ -1,5 +1,6 @@
 package cat.uvic.teknos.m09.cryptoutils;
 
+import cat.uvic.teknos.m09.cryptoutils.Exceptions.DecryptErrorException;
 import cat.uvic.teknos.m09.cryptoutils.dto.EncryptedMessage;
 import org.junit.jupiter.api.Test;
 
@@ -12,12 +13,10 @@ import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
 import static org.junit.jupiter.api.Assertions.*;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class SymmetricEncryptionTest {
 
     @Test
-    void encryptDecryptMessageSuccess() throws InvalidAlgorithmParameterException, NoSuchPaddingException, IllegalBlockSizeException, NoSuchAlgorithmException, InvalidKeySpecException, BadPaddingException, InvalidKeyException {
+    void encryptDecryptMessageSuccess() throws InvalidAlgorithmParameterException, NoSuchPaddingException, IllegalBlockSizeException, NoSuchAlgorithmException, InvalidKeySpecException, BadPaddingException, InvalidKeyException, DecryptErrorException {
 
         String request = "Hola que tal";
         EncryptedMessage mess = SymmetricEncryption.encryptMessage(request.getBytes(),"Patata");
