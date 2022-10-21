@@ -5,40 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb6aa0d2-3fc5-4c22-bf44-122976682d56" name="Changes" comment="modify symmetricEncryption for IVParamSec error byte length">
-      <change afterPath="$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/cryptoutils/PropertiesImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/cryptoutils/Signature.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/test/java/cat/uvic/teknos/m09/cryptoutils/SignatureTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/src/test/resources/m09.p12" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/gradle.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/build/classes/java/main/cat/uvic/teknos/m09/cryptoutils/AssymmetricEncryption.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build/classes/java/main/cat/uvic/teknos/m09/cryptoutils/AssymmetricEncryption.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/build/classes/java/main/cat/uvic/teknos/m09/cryptoutils/Hash.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build/classes/java/main/cat/uvic/teknos/m09/cryptoutils/Hash.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/build/classes/java/main/cat/uvic/teknos/m09/cryptoutils/SignatureTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/build/classes/java/main/cat/uvic/teknos/m09/cryptoutils/SymmetricEncryption.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build/classes/java/main/cat/uvic/teknos/m09/cryptoutils/SymmetricEncryption.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/build/classes/java/test/cat/uvic/teknos/m09/cryptoutils/HashTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build/classes/java/test/cat/uvic/teknos/m09/cryptoutils/HashTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/build/reports/tests/test/classes/cat.uvic.teknos.m09.cryptoutils.AssymmetricEncryptionTest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/build/reports/tests/test/packages/cat.uvic.teknos.m09.cryptoutils.html" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build/reports/tests/test/packages/cat.uvic.teknos.m09.cryptoutils.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/build/resources/main/certificate.cer" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build/resources/main/certificate.cer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/build/resources/main/cryptoutils.properties" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build/resources/main/cryptoutils.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/build/resources/main/m09.p12" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build/resources/main/m09.p12" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/build/resources/test/cryptoutils.properties" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build/resources/test/cryptoutils.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/build/test-results/test/TEST-cat.uvic.teknos.m09.cryptoutils.AssymmetricEncryptionTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/build/classes/java/main/cat/uvic/teknos/m09/cryptoutils/AssymmetricEncryption.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/build/classes/java/main/cat/uvic/teknos/m09/cryptoutils/Exceptions/DecryptErrorException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/build/classes/java/main/cat/uvic/teknos/m09/cryptoutils/Exceptions/MissingPropertiesException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/build/classes/java/main/cat/uvic/teknos/m09/cryptoutils/Hash.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/build/classes/java/main/cat/uvic/teknos/m09/cryptoutils/SymmetricEncryption.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/build/classes/java/main/cat/uvic/teknos/m09/cryptoutils/dto/DigestResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/build/classes/java/main/cat/uvic/teknos/m09/cryptoutils/dto/EncryptedMessage.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/cryptoutils/AssymmetricEncryption.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/cryptoutils/AssymmetricEncryption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/cryptoutils/Hash.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/cryptoutils/Hash.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/cryptoutils/SignatureTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/cryptoutils/SymmetricEncryption.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/cryptoutils/SymmetricEncryption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/main/resources/cryptoutils.properties" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/resources/cryptoutils.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/test/resources/cryptoutils.properties" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/test/resources/cryptoutils.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/cryptoutils/AssymmetricEncryption.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/elbouzzaouiabdelkarim/cryptoutils/AssymmetricEncryption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/cryptoutils/Exceptions/DecryptErrorException.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/elbouzzaouiabdelkarim/cryptoutils/Exceptions/DecryptErrorException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/cryptoutils/Exceptions/MissingPropertiesException.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/elbouzzaouiabdelkarim/cryptoutils/Exceptions/MissingPropertiesException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/cryptoutils/Hash.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/elbouzzaouiabdelkarim/cryptoutils/Hash.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/cryptoutils/PropertiesImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/elbouzzaouiabdelkarim/cryptoutils/PropertiesImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/cryptoutils/Signature.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/elbouzzaouiabdelkarim/cryptoutils/Signature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/cryptoutils/SymmetricEncryption.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/elbouzzaouiabdelkarim/cryptoutils/SymmetricEncryption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/cryptoutils/dto/DigestResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/elbouzzaouiabdelkarim/cryptoutils/dto/DigestResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/cryptoutils/dto/EncryptedMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/elbouzzaouiabdelkarim/cryptoutils/dto/EncryptedMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/test/java/cat/uvic/teknos/m09/cryptoutils/AssymmetricEncryptionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/test/java/cat/uvic/teknos/m09/elbouzzaouiabdelkarim/cryptoutils/AssymmetricEncryptionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/test/java/cat/uvic/teknos/m09/cryptoutils/HashTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/test/java/cat/uvic/teknos/m09/elbouzzaouiabdelkarim/cryptoutils/HashTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/test/java/cat/uvic/teknos/m09/cryptoutils/SignatureTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/test/java/cat/uvic/teknos/m09/elbouzzaouiabdelkarim/cryptoutils/SignatureTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/test/java/cat/uvic/teknos/m09/cryptoutils/SymmetricEncryptionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/test/java/cat/uvic/teknos/m09/elbouzzaouiabdelkarim/cryptoutils/SymmetricEncryptionTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +46,56 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/lib">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="cryptoutils" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="cryptoutils" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="cryptoutils" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="publishing" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="cryptoutils" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="cryptoutils" type="f1a62948:ProjectNode" />
+                <item name="lib" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="cryptoutils" type="f1a62948:ProjectNode" />
+                <item name="lib" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -102,7 +149,7 @@
       <recent name="cat.uvic.teknos.m09.cryptoutils" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.SignatureTest.verifiedOK">
+  <component name="RunManager" selected="Gradle.cryptoutils [publish]">
     <configuration name="AssymmetricEncryptionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -172,29 +219,6 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="SymmetricEncryptionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":lib:test" />
-            <option value="--tests" />
-            <option value="&quot;cat.uvic.teknos.m09.cryptoutils.SymmetricEncryptionTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="SymmetricEncryptionTest.encryptDecryptMessageSuccess" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -218,13 +242,34 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="cryptoutils [publish]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="publish" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.cryptoutils [publish]" />
         <item itemvalue="Gradle.SignatureTest.verifiedOK" />
         <item itemvalue="Gradle.SignatureTest" />
         <item itemvalue="Gradle.AssymmetricEncryptionTest" />
         <item itemvalue="Gradle.SymmetricEncryptionTest.encryptDecryptMessageSuccess" />
-        <item itemvalue="Gradle.SymmetricEncryptionTest" />
       </list>
     </recent_temporary>
   </component>
@@ -243,7 +288,7 @@
       <workItem from="1664556877142" duration="4739000" />
       <workItem from="1665674415077" duration="852000" />
       <workItem from="1665753112929" duration="6614000" />
-      <workItem from="1666359075459" duration="10468000" />
+      <workItem from="1666359075459" duration="13074000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1663349167231</created>
@@ -337,7 +382,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/cryptoutils/AssymmetricEncryption.java</url>
+          <url>file://$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/elbouzzaouiabdelkarim/cryptoutils/AssymmetricEncryption.java</url>
           <line>22</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>

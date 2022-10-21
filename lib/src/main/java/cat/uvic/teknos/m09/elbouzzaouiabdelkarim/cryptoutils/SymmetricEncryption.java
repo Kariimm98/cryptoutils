@@ -1,12 +1,11 @@
-package cat.uvic.teknos.m09.cryptoutils;
+package cat.uvic.teknos.m09.elbouzzaouiabdelkarim.cryptoutils;
 
-import cat.uvic.teknos.m09.cryptoutils.dto.EncryptedMessage;
+import cat.uvic.teknos.m09.elbouzzaouiabdelkarim.cryptoutils.dto.EncryptedMessage;
 
 import javax.crypto.*;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.SecretKeySpec;
-import java.io.IOException;
 import java.security.*;
 import java.security.spec.InvalidKeySpecException;
 import java.util.Properties;

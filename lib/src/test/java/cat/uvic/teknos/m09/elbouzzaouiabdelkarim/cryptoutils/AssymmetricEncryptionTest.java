@@ -1,7 +1,7 @@
-package cat.uvic.teknos.m09.cryptoutils;
+package cat.uvic.teknos.m09.elbouzzaouiabdelkarim.cryptoutils;
 
-import cat.uvic.teknos.m09.cryptoutils.Exceptions.DecryptErrorException;
-import cat.uvic.teknos.m09.cryptoutils.dto.EncryptedMessage;
+import cat.uvic.teknos.m09.elbouzzaouiabdelkarim.cryptoutils.Exceptions.DecryptErrorException;
+import cat.uvic.teknos.m09.elbouzzaouiabdelkarim.cryptoutils.dto.EncryptedMessage;
 import org.junit.jupiter.api.Test;
 
 import javax.crypto.BadPaddingException;

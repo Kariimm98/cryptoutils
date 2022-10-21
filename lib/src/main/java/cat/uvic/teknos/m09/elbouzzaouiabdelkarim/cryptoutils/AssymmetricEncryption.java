@@ -1,18 +1,16 @@
-package cat.uvic.teknos.m09.cryptoutils;
+package cat.uvic.teknos.m09.elbouzzaouiabdelkarim.cryptoutils;
 
-import cat.uvic.teknos.m09.cryptoutils.Exceptions.DecryptErrorException;
-import cat.uvic.teknos.m09.cryptoutils.dto.EncryptedMessage;
+import cat.uvic.teknos.m09.elbouzzaouiabdelkarim.cryptoutils.Exceptions.DecryptErrorException;
+import cat.uvic.teknos.m09.elbouzzaouiabdelkarim.cryptoutils.dto.EncryptedMessage;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
-import java.io.IOException;
 import java.security.InvalidKeyException;
 import java.security.KeyPairGenerator;
 import java.security.NoSuchAlgorithmException;
 import java.security.PublicKey;
-import java.util.Properties;
 
 public class AssymmetricEncryption extends PropertiesImp {
 

@@ -1,7 +1,6 @@
-package cat.uvic.teknos.m09.cryptoutils;
+package cat.uvic.teknos.m09.elbouzzaouiabdelkarim.cryptoutils;
 
-import cat.uvic.teknos.m09.cryptoutils.Exceptions.MissingPropertiesException;
-import cat.uvic.teknos.m09.cryptoutils.dto.EncryptedMessage;
+import cat.uvic.teknos.m09.elbouzzaouiabdelkarim.cryptoutils.Exceptions.MissingPropertiesException;
 
 import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;

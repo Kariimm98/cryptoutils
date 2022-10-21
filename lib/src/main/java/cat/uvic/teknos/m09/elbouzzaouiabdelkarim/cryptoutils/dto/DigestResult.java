@@ -1,4 +1,4 @@
-package cat.uvic.teknos.m09.cryptoutils.dto;
+package cat.uvic.teknos.m09.elbouzzaouiabdelkarim.cryptoutils.dto;
 
 public class DigestResult<T> {
 
