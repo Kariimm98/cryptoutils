@@ -14,23 +14,13 @@ import java.security.NoSuchAlgorithmException;
 import java.security.PublicKey;
 import java.util.Properties;
 
-public class AssymmetricEncryption {
-        public static Properties props;
-    static{
-        props = new Properties();
-        //takes file properties from current classpath
-        try{
-            props.load(ClassLoader.getSystemClassLoader().getResourceAsStream("/cryptoutils.properties"));
-        }catch(IOException | NullPointerException error){
-            setDefaultProperties();
-        }
+public class AssymmetricEncryption extends PropertiesImp {
 
-    }
-
+    private static String ALGORITHM = "assymmetric.algorithm";
 
     public EncryptedMessage encryptMessage(byte[] message) throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException {
         EncryptedMessage result = new EncryptedMessage();
-        String algorithm = props.getProperty("assymmetric.algorithm");
+        String algorithm = props.getProperty(ALGORITHM);
         var keyPairGenerator = KeyPairGenerator.getInstance(algorithm);
         var keyPair = keyPairGenerator.generateKeyPair();
 
@@ -47,21 +37,13 @@ public class AssymmetricEncryption {
     public byte[] decryptMessage(EncryptedMessage message) throws DecryptErrorException {
 
         try{
-            String algorithm = props.getProperty("assymmetric.algorithm");
+            String algorithm = props.getProperty(ALGORITHM);
             var cipher = Cipher.getInstance(algorithm);
             cipher.init(Cipher.DECRYPT_MODE,(PublicKey)message.getPublicKey());
             byte[] decryptedText = cipher.doFinal(message.getMessage());
             return decryptedText;
         }catch(Exception e){
             throw new DecryptErrorException("Couldn't decrypt message");
-        }
-    }
-
-    public static void setDefaultProperties() {
-        try {
-            props.load(Hash.class.getResourceAsStream("/cryptoutils.properties"));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
         }
     }
 }

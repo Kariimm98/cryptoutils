@@ -14,20 +14,10 @@ import java.util.Base64;
 import java.util.HashMap;
 import java.util.Properties;
 
-public  class Hash {
-    public  static Properties props;
+public  class Hash extends PropertiesImp{
 
-    static{
-        props = new Properties();
-        //takes file properties from current classpath
-        try{
-            props.load(ClassLoader.getSystemClassLoader().getResourceAsStream("/cryptoutils.properties"));
-        }catch(IOException| NullPointerException error){
-            setDefaultProperties();
-        }
-    }
-
-    public  static byte[] getHash(byte[] message) throws NoSuchAlgorithmException, MissingPropertiesException {
+    private static String ALGORITHM = "algorithm";
+    public  byte[] getHash(byte[] message) throws NoSuchAlgorithmException, MissingPropertiesException {
 
         String algorithm = props.getProperty("algorithm");
 
@@ -45,7 +35,7 @@ public  class Hash {
         return messageDigest.digest(message);
     }
 
-    public static String getHashAsString(byte[] message) throws NoSuchAlgorithmException, MissingPropertiesException {
+    public String getHashAsString(byte[] message) throws NoSuchAlgorithmException, MissingPropertiesException {
         String algorithm = props.getProperty("algorithm");
 
         if(algorithm == null){
@@ -65,7 +55,7 @@ public  class Hash {
 
     }
 
-    public static DigestResult getHashWithRandomSalt(byte[] message) throws MissingPropertiesException, NoSuchAlgorithmException {
+    public DigestResult getHashWithRandomSalt(byte[] message) throws MissingPropertiesException, NoSuchAlgorithmException {
         DigestResult<byte[]> result;
 
         String algorithm = props.getProperty("algorithm");
@@ -83,7 +73,7 @@ public  class Hash {
         return result;
     }
 
-    public static DigestResult getHashWithRandomSaltAsString(byte[] message) throws MissingPropertiesException, NoSuchAlgorithmException {
+    public DigestResult getHashWithRandomSaltAsString(byte[] message) throws MissingPropertiesException, NoSuchAlgorithmException {
         DigestResult<String> result;
 
         String algorithm = props.getProperty("algorithm");
@@ -106,17 +96,7 @@ public  class Hash {
         return result;
     }
 
-    //takes file properties from Library resources
-    public static void setDefaultProperties() {
-        try {
-            props.load(Hash.class.getResourceAsStream("/cryptoutils.properties"));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-
-    public  static byte[] getRandomSalt(){
+    public  byte[] getRandomSalt(){
         var secureRandom = new SecureRandom();
         var salt  = new byte[16];
         secureRandom.nextBytes(salt);

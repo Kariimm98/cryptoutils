@@ -4,7 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb6aa0d2-3fc5-4c22-bf44-122976682d56" name="Changes" comment="modify symmetricEncryption for IVParamSec error byte length" />
+    <list default="true" id="cb6aa0d2-3fc5-4c22-bf44-122976682d56" name="Changes" comment="modify symmetricEncryption for IVParamSec error byte length">
+      <change afterPath="$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/cryptoutils/PropertiesImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/cryptoutils/Signature.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/test/java/cat/uvic/teknos/m09/cryptoutils/SignatureTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/src/test/resources/m09.p12" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/build/classes/java/main/cat/uvic/teknos/m09/cryptoutils/AssymmetricEncryption.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build/classes/java/main/cat/uvic/teknos/m09/cryptoutils/AssymmetricEncryption.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/build/classes/java/main/cat/uvic/teknos/m09/cryptoutils/Hash.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build/classes/java/main/cat/uvic/teknos/m09/cryptoutils/Hash.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/build/classes/java/main/cat/uvic/teknos/m09/cryptoutils/SignatureTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/build/classes/java/main/cat/uvic/teknos/m09/cryptoutils/SymmetricEncryption.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build/classes/java/main/cat/uvic/teknos/m09/cryptoutils/SymmetricEncryption.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/build/classes/java/test/cat/uvic/teknos/m09/cryptoutils/HashTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build/classes/java/test/cat/uvic/teknos/m09/cryptoutils/HashTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/build/reports/tests/test/classes/cat.uvic.teknos.m09.cryptoutils.AssymmetricEncryptionTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/build/reports/tests/test/packages/cat.uvic.teknos.m09.cryptoutils.html" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build/reports/tests/test/packages/cat.uvic.teknos.m09.cryptoutils.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/build/resources/main/certificate.cer" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build/resources/main/certificate.cer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/build/resources/main/cryptoutils.properties" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build/resources/main/cryptoutils.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/build/resources/main/m09.p12" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build/resources/main/m09.p12" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/build/resources/test/cryptoutils.properties" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build/resources/test/cryptoutils.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/build/test-results/test/TEST-cat.uvic.teknos.m09.cryptoutils.AssymmetricEncryptionTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/cryptoutils/AssymmetricEncryption.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/cryptoutils/AssymmetricEncryption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/cryptoutils/Hash.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/cryptoutils/Hash.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/cryptoutils/SignatureTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/cryptoutils/SymmetricEncryption.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/cryptoutils/SymmetricEncryption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/resources/cryptoutils.properties" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/resources/cryptoutils.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/test/resources/cryptoutils.properties" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/test/resources/cryptoutils.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,21 +75,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/10011093/Desktop/proves&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "C:/Users/10011093/source/repos/cryptoutils/lib/src/test/resources",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\10011093\source\repos\cryptoutils\lib\src\test\resources" />
@@ -67,7 +102,7 @@
       <recent name="cat.uvic.teknos.m09.cryptoutils" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.AssymmetricEncryptionTest">
+  <component name="RunManager" selected="Gradle.SignatureTest.verifiedOK">
     <configuration name="AssymmetricEncryptionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -91,7 +126,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="HashTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SignatureTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -104,7 +139,7 @@
           <list>
             <option value=":lib:test" />
             <option value="--tests" />
-            <option value="&quot;cat.uvic.teknos.m09.cryptoutils.HashTest&quot;" />
+            <option value="&quot;cat.uvic.teknos.m09.cryptoutils.SignatureTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -114,7 +149,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="HashTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SignatureTest.verifiedOK" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -127,7 +162,7 @@
           <list>
             <option value=":lib:test" />
             <option value="--tests" />
-            <option value="&quot;cat.uvic.teknos.m09.HashTest&quot;" />
+            <option value="&quot;cat.uvic.teknos.m09.cryptoutils.SignatureTest.verifiedOK&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -185,11 +220,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.SignatureTest.verifiedOK" />
+        <item itemvalue="Gradle.SignatureTest" />
         <item itemvalue="Gradle.AssymmetricEncryptionTest" />
         <item itemvalue="Gradle.SymmetricEncryptionTest.encryptDecryptMessageSuccess" />
         <item itemvalue="Gradle.SymmetricEncryptionTest" />
-        <item itemvalue="Gradle.HashTest (1)" />
-        <item itemvalue="Gradle.HashTest" />
       </list>
     </recent_temporary>
   </component>
@@ -207,7 +242,8 @@
       <workItem from="1664544814318" duration="4318000" />
       <workItem from="1664556877142" duration="4739000" />
       <workItem from="1665674415077" duration="852000" />
-      <workItem from="1665753112929" duration="4682000" />
+      <workItem from="1665753112929" duration="6614000" />
+      <workItem from="1666359075459" duration="10468000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1663349167231</created>
@@ -302,7 +338,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/lib/src/main/java/cat/uvic/teknos/m09/cryptoutils/AssymmetricEncryption.java</url>
-          <line>32</line>
+          <line>22</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>

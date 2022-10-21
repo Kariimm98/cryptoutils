@@ -11,19 +11,15 @@ import java.security.*;
 import java.security.spec.InvalidKeySpecException;
 import java.util.Properties;
 
-public class SymmetricEncryption {
+public class SymmetricEncryption extends PropertiesImp {
     public static Properties props;
     private static Cipher cipher;
 
-    static{
-        props = new Properties();
-        //takes file properties from current classpath
-        try{
-            props.load(ClassLoader.getSystemClassLoader().getResourceAsStream("/cryptoutils.properties"));
-        }catch(IOException | NullPointerException error){
-            setDefaultProperties();
-        }
-    }
+    private static String SALT ="symmetric.salt";
+    private static String ALGORITHM ="symmetric.algorithm";
+    private static String ITERATIONS ="symmetric.iterations";
+
+
 
     public static EncryptedMessage encryptMessage(byte[]message, String password) throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidKeySpecException, InvalidAlgorithmParameterException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException {
         var key = getPrivateKeyFromPass(password);
@@ -48,26 +44,16 @@ public class SymmetricEncryption {
         var result = cipher.doFinal(encr.getMessage());
 
         return result;
-//        var decripterText = new String(decripterTextBytes);
     }
 
     private static Key getPrivateKeyFromPass(String password) throws NoSuchAlgorithmException, InvalidKeySpecException {
 
-        String salt = props.getProperty("symmetric.salt");
-        String algorithm = props.getProperty("symmetric.algorithm");
-        int iterations = Integer.parseInt(props.getProperty("symmetric.iterations"));
+        String salt = props.getProperty(SALT);
+        String algorithm = props.getProperty(ALGORITHM);
+        int iterations = Integer.parseInt(props.getProperty(ITERATIONS));
 
         PBEKeySpec pbeKeySpec = new PBEKeySpec(password.toCharArray(),salt.getBytes(),iterations,256);
         SecretKey pbeKey = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256").generateSecret(pbeKeySpec);
         return new SecretKeySpec(pbeKey.getEncoded(), algorithm);
     }
-
-    public static void setDefaultProperties() {
-        try {
-            props.load(Hash.class.getResourceAsStream("/cryptoutils.properties"));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
 }
