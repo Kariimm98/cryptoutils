@@ -14,14 +14,14 @@ public class SignatureTest {
     @Test
     void verifiedOK() throws UnrecoverableKeyException, MissingPropertiesException, CertificateException, KeyStoreException, IOException, NoSuchAlgorithmException, SignatureException, InvalidKeyException {
 
-        cat.uvic.teknos.m09.elbouzzaouiabdelkarim.cryptoutils.Signature signature = new cat.uvic.teknos.m09.elbouzzaouiabdelkarim.cryptoutils.Signature();
+        Signature signature = new cat.uvic.teknos.m09.elbouzzaouiabdelkarim.cryptoutils.Signature();
         String message = "hola que tal";
-
+        CryptoUtils cu = new CryptoUtils();
         var stream = getClass().getClassLoader().getResourceAsStream("lib/src/test/resource/certificate.cer");
-        var hash = new Hash().getHash(message.getBytes());
-        var signed = signature.sign(hash);
+        var hash = cu.hash(message.getBytes());
+        var signed = signature.sign(hash.getHash());
 
-        assertTrue(signature.verify(hash,signed,stream.readAllBytes()));
+        assertTrue(signature.verify(hash.getHash(),signed,stream.readAllBytes()));
     }
 
     @Test
@@ -30,10 +30,11 @@ public class SignatureTest {
         String message = "hola que tal";
 
         var stream = new FileInputStream("/resource/certificate.cer");
-        var hash = new Hash().getHash(message.getBytes());
+        CryptoUtils cu = new CryptoUtils();
+        var hash = cu.hash(message.getBytes());
         var signed = new byte[100];
 
         new Random().nextBytes(signed);
-        assertFalse(signature.verify(hash,signed,stream.readAllBytes()));
+        assertFalse(signature.verify(hash.getHash(),signed,stream.readAllBytes()));
     }
 }

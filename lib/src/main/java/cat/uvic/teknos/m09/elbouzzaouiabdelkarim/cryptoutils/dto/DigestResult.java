@@ -1,19 +1,19 @@
 package cat.uvic.teknos.m09.elbouzzaouiabdelkarim.cryptoutils.dto;
 
-public class DigestResult<T> {
+public class DigestResult {
 
-    T hash;
+    byte[] hash;
     String algorithm;
-    T salt;
+    byte[] salt;
 
-    public DigestResult(T hash,String algorithm, T salt){
+    public DigestResult(byte[] hash,String algorithm, byte[] salt){
         this.hash = hash;
         this.algorithm = algorithm;
         this.salt =  salt;
 
     }
 
-    public T getHash() {
+    public byte[] getHash() {
         return hash;
     }
 
@@ -21,7 +21,7 @@ public class DigestResult<T> {
         return algorithm;
     }
 
-    public T getSalt() {
+    public byte[] getSalt() {
         return salt;
     }
 }

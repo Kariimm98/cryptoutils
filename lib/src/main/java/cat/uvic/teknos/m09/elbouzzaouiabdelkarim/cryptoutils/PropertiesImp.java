@@ -17,7 +17,7 @@ public class PropertiesImp {
 
     public static void setDefaultProperties() {
         try {
-            props.load(Hash.class.getResourceAsStream("/cryptoutils.properties"));
+            props.load(PropertiesImp.class.getResourceAsStream("/cryptoutils.properties"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

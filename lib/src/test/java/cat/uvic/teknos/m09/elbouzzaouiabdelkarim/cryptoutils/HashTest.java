@@ -14,18 +14,16 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class HashTest {
 
-    private static Hash Hash;
-
-    @Test void sameMessageSameResult() throws NoSuchAlgorithmException {
+    @Test void DigestResultOk() throws NoSuchAlgorithmException {
 
         byte[] message = "hola".getBytes();
         byte[] message2 = "hola".getBytes();
 
+        CryptoUtils cu = new CryptoUtils();
+        var result = Assertions.assertDoesNotThrow(() ->  cu.hash(message));
+        var result2 = Assertions.assertDoesNotThrow(() ->  cu.hash(message2));
 
-        String result = Assertions.assertDoesNotThrow(() ->  Hash.getHashAsString(message));
-        String result2 = Assertions.assertDoesNotThrow(() ->  Hash.getHashAsString(message2));
-
-        assertEquals(result,result2);
+        assertTrue(java.util.Arrays.equals(result.getHash(),result2.getHash()));
 
     }
 
@@ -33,44 +31,23 @@ class HashTest {
     @Test void throwsMissingProperties(){
         byte[] message = "hola".getBytes();
 
-        String alg = Hash.props.getProperty("algorithm");
-        Hash.props.remove("algorithm");
+        CryptoUtils cu = new CryptoUtils();
+        String alg = cu.props.getProperty("hash.algorithm");
+        cu.props.remove("hash.algorithm");
+        assertThrows(MissingPropertiesException.class,()->cu.hash(message));
 
-        assertThrows(MissingPropertiesException.class,()->Hash.getHash(message));
-
-        Hash.props.setProperty("algorithm",alg);
+        cu.props.setProperty("hash.algorithm",alg);
 
     }
 
-    @Test void notSameHash(){
+    @Test void DigestResultNotSame(){
         byte[] message = "hola".getBytes();
         byte[] message2 = "hola2".getBytes();
 
-        String result = Assertions.assertDoesNotThrow(() ->  Hash.getHashAsString(message));
-        String result2 = Assertions.assertDoesNotThrow(() ->  Hash.getHashAsString(message2));
+        CryptoUtils cu = new CryptoUtils();
+        var result = Assertions.assertDoesNotThrow(() ->  cu.hash(message));
+        var result2 = Assertions.assertDoesNotThrow(() ->  cu.hash(message2));
 
         assertNotEquals(result,result2);
-    }
-
-    //returns a Hashmap with salt uses in digest and Hash as byte[]
-    @Test void getHashWithRandomSalt(){
-        byte[] message = "hola".getBytes();
-
-        DigestResult result = Assertions.assertDoesNotThrow(() ->  Hash.getHashWithRandomSalt(message));
-
-        assertTrue(()->result.getSalt()!=null);
-        assertDoesNotThrow(()->result.getHash()!=null);
-
-    }
-
-    //returns a Hashmap with salt uses in digest and Hash as String
-    @Test void getHashWithRandomSaltAsString(){
-        byte[] message = "hola".getBytes();
-
-        DigestResult result = Assertions.assertDoesNotThrow(() ->  Hash.getHashWithRandomSaltAsString(message));
-
-        assertTrue(()->result.getSalt()!=null);
-        assertDoesNotThrow(()->result.getHash()!=null);
-
     }
 }

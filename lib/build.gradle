@@ -24,6 +24,7 @@ publishing{
                 password = "Teknos01."
             }
             name="teknos"
+            
             allowInsecureProtocol = true
             url='http://164.68.111.12:8081/nexus/content/repositories/maven-releases'
         }
