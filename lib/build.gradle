@@ -23,9 +23,8 @@ publishing{
                 username = "teknos2"
                 password = "Teknos01."
             }
+            //allowInsecureProtocol=true
             name="teknos"
-            
-            allowInsecureProtocol = true
             url='http://164.68.111.12:8081/nexus/content/repositories/maven-releases'
         }
     }
@@ -34,7 +33,7 @@ publishing{
         maven(MavenPublication) {
             groupId 'cat.uvic.teknos.m09.elbouzzaouiabdelkarim'
             artifactId 'cryptoutils'
-            version '1.0'
+            version '1.2'
             from components.java
         }
     }

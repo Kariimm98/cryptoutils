@@ -1,6 +1,7 @@
 package cat.uvic.teknos.m09.elbouzzaouiabdelkarim.cryptoutils;
 
 import cat.uvic.teknos.m09.elbouzzaouiabdelkarim.cryptoutils.Exceptions.DecryptErrorException;
+import cat.uvic.teknos.m09.elbouzzaouiabdelkarim.cryptoutils.Exceptions.MissingPropertiesException;
 import cat.uvic.teknos.m09.elbouzzaouiabdelkarim.cryptoutils.dto.EncryptedMessage;
 import org.junit.jupiter.api.Test;
 
@@ -16,21 +17,21 @@ import static org.junit.jupiter.api.Assertions.*;
 class SymmetricEncryptionTest {
 
     @Test
-    void encryptDecryptMessageSuccess() throws InvalidAlgorithmParameterException, NoSuchPaddingException, IllegalBlockSizeException, NoSuchAlgorithmException, InvalidKeySpecException, BadPaddingException, InvalidKeyException, DecryptErrorException {
-
+    void encryptDecryptMessageSuccess() throws InvalidAlgorithmParameterException, NoSuchPaddingException, IllegalBlockSizeException, NoSuchAlgorithmException, InvalidKeySpecException, BadPaddingException, InvalidKeyException, DecryptErrorException, MissingPropertiesException {
+        CryptoUtils cr = new CryptoUtils();
         String request = "Hola que tal";
-        EncryptedMessage mess = SymmetricEncryption.encryptMessage(request.getBytes(),"Patata");
-        byte[] result = SymmetricEncryption.decryptedMessage(mess,"Patata");
+        EncryptedMessage mess = cr.encrypt(request.getBytes(),"Patata");
+        byte[] result = cr.decrypt(mess,"Patata");
         assertTrue(new String(result).equals(request));
     }
 
     @Test
-    void encryptDecryptFailed() throws InvalidAlgorithmParameterException, NoSuchPaddingException, IllegalBlockSizeException, NoSuchAlgorithmException, InvalidKeySpecException, BadPaddingException, InvalidKeyException {
-
+    void encryptDecryptFailed() throws InvalidAlgorithmParameterException, NoSuchPaddingException, IllegalBlockSizeException, NoSuchAlgorithmException, InvalidKeySpecException, BadPaddingException, InvalidKeyException, MissingPropertiesException {
+        CryptoUtils cr = new CryptoUtils();
         String request = "Hola que tal";
-        EncryptedMessage mess = SymmetricEncryption.encryptMessage(request.getBytes(),"Patata");
-        byte[] result = SymmetricEncryption.decryptedMessage(mess,"Patata2");
-        assertFalse(new String(result).equals(request));
+        EncryptedMessage mess = cr.encrypt(request.getBytes(),"Patata");
+        assertThrows(BadPaddingException.class,()->cr.decrypt(mess,"Patata2"));
+
     }
 
 }
