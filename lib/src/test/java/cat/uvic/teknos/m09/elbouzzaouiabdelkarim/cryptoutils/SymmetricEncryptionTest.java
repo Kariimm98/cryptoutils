@@ -31,7 +31,15 @@ class SymmetricEncryptionTest {
         String request = "Hola que tal";
         EncryptedMessage mess = cr.encrypt(request.getBytes(),"Patata");
         assertThrows(BadPaddingException.class,()->cr.decrypt(mess,"Patata2"));
+    }
 
+    @Test
+    void encryptDecryptMessageSuccessNoSalt() throws InvalidAlgorithmParameterException, MissingPropertiesException, NoSuchPaddingException, IllegalBlockSizeException, NoSuchAlgorithmException, InvalidKeySpecException, BadPaddingException, InvalidKeyException {
+        CryptoUtils cr = new CryptoUtils();
+        String request = "Hola que tal";
+        byte[] mess = cr.encryptNoSalt(request.getBytes(),"Patata");
+        byte[] result = cr.decrypt(mess,"Patata");
+        assertTrue(new String(result).equals(request));
     }
 
 }
