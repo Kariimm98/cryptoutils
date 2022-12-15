@@ -4,23 +4,28 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class PropertiesImp {
-    public static Properties props;
-    static{
+
+    public String propertiesPath;
+    public Properties props;
+
+    public PropertiesImp(String properties) {
+        this.propertiesPath = properties;
+
         props = new Properties();
         //takes file properties from current classpath
         try{
-            props.load(ClassLoader.getSystemClassLoader().getResourceAsStream("/cryptoutils.properties"));
+            props.load(ClassLoader.getSystemClassLoader().getResourceAsStream(propertiesPath));
         }catch(IOException | NullPointerException error){
             setDefaultProperties();
         }
     }
-
-    public static void setDefaultProperties() {
+    public void setDefaultProperties() {
         try {
-            props.load(PropertiesImp.class.getResourceAsStream("/cryptoutils.properties"));
+            props.load(PropertiesImp.class.getResourceAsStream(propertiesPath));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
+
 
 }

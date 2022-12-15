@@ -35,6 +35,11 @@ public class CryptoUtils extends PropertiesImp{
     private static String SIGNATURE_ALIAS = "signature.alias";
 
 
+    public CryptoUtils() {
+        super("/cryptoutils.properties");
+    }
+
+
     /**
      * Generate Hash with algorithm in properties and salt
      * @param message byte[] for generate hash
