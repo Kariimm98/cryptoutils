@@ -97,6 +97,28 @@ public class CryptoUtils extends PropertiesImp{
         EncryptedMessage result = new EncryptedMessage(cipherText,bytes);
         return result;
     }
+    /**
+     * Encrpts message with password without salt
+     * @param message byte[] to encrypt
+     * @param password String for encrypt
+     * @return Object encrypted message with byte[] message encrypted, byte[] salt
+     * @throws NoSuchPaddingException
+     * @throws NoSuchAlgorithmException
+     * @throws InvalidKeySpecException
+     * @throws InvalidAlgorithmParameterException
+     * @throws InvalidKeyException
+     * @throws IllegalBlockSizeException
+     * @throws BadPaddingException
+     * @throws MissingPropertiesException
+     */
+    public byte[] encryptNoSalt(byte[]message, String password) throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidKeySpecException, InvalidAlgorithmParameterException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException, MissingPropertiesException {
+        var key = getPrivateKeyFromPass(password);
+        Cipher cipher;
+        cipher = Cipher.getInstance("AES");
+        cipher.init(Cipher.ENCRYPT_MODE,key);
+        var cipherText = cipher.doFinal(message);
+        return cipherText;
+    }
 
     private Key getPrivateKeyFromPass(String password) throws NoSuchAlgorithmException, InvalidKeySpecException, MissingPropertiesException {
 
@@ -134,6 +156,29 @@ public class CryptoUtils extends PropertiesImp{
         var iv = new IvParameterSpec(encr.getSalt());
         cipher.init(Cipher.DECRYPT_MODE,key,iv);
         var result = cipher.doFinal(encr.getMessage());
+
+        return result;
+    }
+    /**
+     * Decrypt message using password without salt
+     * @param encr Object with byte[] encrypted message, byte[] salt for decrypt
+     * @param password String for decrypt message
+     * @return byte[] message decrypted
+     * @throws NoSuchAlgorithmException
+     * @throws InvalidKeySpecException
+     * @throws InvalidAlgorithmParameterException
+     * @throws InvalidKeyException
+     * @throws IllegalBlockSizeException
+     * @throws BadPaddingException
+     * @throws NoSuchPaddingException
+     * @throws MissingPropertiesException
+     */
+    public byte[] decrypt(byte[] encr, String password) throws NoSuchAlgorithmException, InvalidKeySpecException, InvalidAlgorithmParameterException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException, NoSuchPaddingException, MissingPropertiesException {
+        Cipher cipher;
+        cipher = Cipher.getInstance("AES");
+        Key key = getPrivateKeyFromPass(password);
+        cipher.init(Cipher.DECRYPT_MODE,key);
+        var result = cipher.doFinal(encr);
 
         return result;
     }
